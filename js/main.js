@@ -22,3 +22,8 @@ const linkAction = () => {
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+
+document.addEventListener('click' , (e) =>{
+    console.log(e.target)
+} )
