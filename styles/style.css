@@ -310,10 +310,46 @@ body.dark-theme {
 }
 
 .home__social{
-  
+  display: flex;
+  justify-self: center;
+  column-gap: 1.25rem;
 }
 
 
+.home__social-link{
+  font-size: 1.25rem;
+  color: var(--text-color-light);
+  transition: color .3s;
+}
+
+
+.home__info{
+  display: grid;
+  row-gap: 2rem;
+}
+
+.home__info-title{
+  font-family: var(--body-font);
+  font-size: var(--smaller-font-size);
+  font-weight: 400;
+  color: var(--text-color-light);
+  margin-bottom: 1rem;
+}
+
+.home__info-description,
+.home__info-numbers{
+  font-family: var(--title-font);
+  color: var(--title-color);
+}
+
+.home__info-description{
+  padding-right: 4rem;
+}
+
+.home__info-numbers{
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+}
 /*=============== SKILLS ===============*/
 
 
