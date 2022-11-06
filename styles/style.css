@@ -352,9 +352,85 @@ body.dark-theme {
 }
 /*=============== SKILLS ===============*/
 
+.skill__container{
+  row-gap: 3.5rem;
+}
+
+.skill__title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .5rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 3rem;
+}
+
+.skill__title i{
+  font-size: 1rem;
+  font-weight: initial;
+}
+
+.skill__info{
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+  gap: 2.5rem 2rem;
+}
+
+.skill__data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill__blob{
+  width: 100px;
+  height: 100px;
+  background-color: var(--container-color);
+  border-radius: 100%;
+  margin-bottom: 1rem;
+  padding: 1.8rem;
+  cursor: pointer;
+}
+
+.figma{
+  width: 100px;
+  height: 50px;
+}
+
+.skill__name{
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.skill__subtitle{
+  font-size: var(--tiny-font-size);
+  color: var(--text-color-light);
+}
 
 /* Animation skills */
+.skill__blob :hover{
+  animation: bounce-skills .6s;
+}
 
+@keyframes bounce-skills{
+  0%{
+    transform: translate(0);
+  }
+  20%{
+    transform: translateY(-6px);
+  }
+  40%{
+    transform: translate(0);
+  }
+  60%{
+    transform: translateY(-3px);
+  }
+  80%{
+    transform: translate(0);
+  }
+}
 
 /*=============== QUALIFICATION ===============*/
 
