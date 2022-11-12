@@ -118,6 +118,14 @@ body.dark-theme {
   margin-inline: 1.5rem;
 }
 
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .grid {
   display: grid;
   gap: 1.5rem;
