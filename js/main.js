@@ -1,6 +1,7 @@
 const navMenu = document.getElementById('nav-menu'),
         navToggle = document.getElementById('nav-toggle'),
-        navClose = document.getElementById('nav-close')
+        navClose = document.getElementById('nav-close'),
+        navBar = document.getElementById('navbar')
         
         
 if(navToggle){
@@ -14,6 +15,13 @@ if(navClose){
         navMenu.classList.remove('show-menu')
     } )
 }
+
+navMenu.addEventListener('blur' ,(e) => {
+  console.log(e.target);
+    // navMenu.classList.remove('show-menu')
+    
+
+})
 
 const navLink =document.querySelectorAll ('.nav__link')
 
@@ -57,3 +65,35 @@ let swiperProjects = new Swiper(".projects__container", {
           contactEmail = document.getElementById('contact-email'),
           contactProject = document.getElementById('contact-project'),
           contactMessage = document.getElementById('contact-message')
+
+    const sendEmail = (e) =>{
+      e.preventDefault()
+     
+      if(contactName.value === '' || contactEmail.value === '' || contactProject.value === ''){
+        contactMessage.classList.remove('color-blue')
+        contactMessage.classList.add('color-red')
+
+        contactMessage.textContent = 'write all the input fields📩'
+      }else{
+        emailjs.sendForm('service_w0jzmc5','template_ul65vbf','#contact-form','aIeDzi6kn_U1LF55O')
+        .then(() =>{
+
+          contactMessage.classList.add('color-blue')
+          contactMessage.textContent = 'Message sent ✅'
+
+          setTimeout( () =>{
+            contactMessage.textContent = ''          
+          }, 5000)
+        })
+        .catch(err => {
+          contactMessage.classList.add('color-red')
+
+          contactMessage.textContent = err.text;
+        })
+
+      }
+    }      
+
+    console.log(contactForm);
+    
+    contactForm.addEventListener('submit', sendEmail)
