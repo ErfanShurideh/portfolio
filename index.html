@@ -576,7 +576,7 @@
                             <span class="contact__data-title">Telegtam</span>
                             <span class="contact__data-info">@M_Erfan_62</span>
                             <a href="https://t.me/M_Erfan_62" class="contact__button">
-                                Write me
+                                Write me <i class="ri-arrow-right-line"></i>
                             </a>
                         </div>
                     </div>
@@ -586,6 +586,29 @@
                     <h3 class="contact__title">
                         <i class="ri-send-plane-line"></i> Write me your project
                     </h3>
+
+                    <form action="" class="contact__form" id="contact-form">
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag">Name</label>
+                            <input type="text" name="user_name" required placeholder="Write your name" class="contact__form-input" id="contact-name">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag">Email</label>
+                            <input type="email" name="user_name" required placeholder="Write your email" class="contact__form-input" id="contact-email">
+                        </div>
+
+                        <div class="contact__form-div  contact__form-area">
+                            <label class="contact__form-tag">Project</label>
+                            <textarea name="User project" placeholder="Write your project" id="contact-project" class="contact__form-input"></textarea>
+                        </div>
+
+                        <p class="contact__message" id="contact-message">Message</p>
+
+                        <button type="submit" class="contact__button">
+                            Submit <i class="ri-arrow-right-up-line"></i>
+                        </button>
+                    </form>
                 </div>
 
             </div>
@@ -599,7 +622,8 @@
 
 
 
-
+    <!-- ======= EMAILJS ======= -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 
     <!--======= SWIPER JS =======  -->

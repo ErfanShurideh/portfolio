@@ -50,3 +50,10 @@ let swiperProjects = new Swiper(".projects__container", {
           prevEl: ".swiper-button-prev",
         },
       });
+
+    /*========== EMAILJS ==========*/
+    const contactForm = document.getElementById('contact-form'),
+          contactName = document.getElementById('contact-name'),
+          contactEmail = document.getElementById('contact-email'),
+          contactProject = document.getElementById('contact-project'),
+          contactMessage = document.getElementById('contact-message')
