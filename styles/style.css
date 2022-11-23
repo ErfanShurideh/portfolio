@@ -261,17 +261,19 @@ body.dark-theme {
 }
 
 /* Active link */
-
+.active-link{
+  color: var(--title-color);
+}
 
 /*=============== HOME ===============*/
-.body{
+/* .body{
   -ms-overflow-style: none;
   scrollbar-width: none ;
   overflow-y: scroll;
 }
 body::-webkit-scrollbar {
   display: none; 
-}
+} */
 .home__container{
     row-gap: 4rem;
     padding-top: 2rem;
@@ -291,7 +293,7 @@ body::-webkit-scrollbar {
 .home__blob{
   position:relative;
   width: 220px;
-  height: 290px;
+  height: 270px;
   background-color: var(--body-color);
   border: 2px solid var(--text-color-light);
   justify-self: center;
@@ -858,11 +860,66 @@ body::-webkit-scrollbar {
 }
 
 /*=============== FOOTER ===============*/
+ .footer__container{
+  padding: 3rem 0 7rem;
+  text-align: center;
+ }
 
+ .footer__title{
+  color: var(--title-color);
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+ }
+
+ .footer__list,
+ .footer__social{
+  display: flex;
+  justify-content: center;
+ }
+
+ .footer__list{
+  margin: 2.5rem 0;
+  column-gap: 2.5rem;
+ }
+
+ .footer__link{
+    color: var(--title-color);
+ }
+
+ .footer__link:hover{
+    text-decoration: underline;
+ }
+
+
+ .footer__social{
+  column-gap: 1.25rem;
+ }
+
+ .footer__social-link{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  transition: transform .3s;
+ }
+
+ .footer__social-link:hover{
+  transform: translateY(-.15rem);
+ }
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: .6rem;
+  border-radius: .5rem;
+  color: hsl(207, 4% , 75%);
+}
 
+::-webkit-scrollbar-thumb{
+  background-color: hsl(207, 4%, 65%);
+  border-radius: .5rem;
+}
 
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(207, 4%, 55%);
+}
 /*=============== SCROLL UP ===============*/
 
 
