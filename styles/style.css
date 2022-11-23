@@ -96,7 +96,19 @@ img {
 }
 
 /*=============== THEME ===============*/
+.nav__buttons{
+  display: flex;
+  align-items: center;
+  column-gap: .75rem;
+}
 
+.change-theme{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color .3s;
+ 
+}
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
@@ -301,7 +313,7 @@ body::-webkit-scrollbar {
   place-items: center;
 }
 .profile{
-  border-radius: 6rem;
+  border-radius: 5rem;
   height: 250px;
 }
 
